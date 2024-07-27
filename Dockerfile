@@ -1,7 +1,8 @@
 FROM ubuntu:latest
 LABEL MAINTAINER="UiLgNoD-lIaMtOh <UiLgNoD.lIaMtOh@hotmail.com>"
 ADD package /tmp/
-RUN apt-get -qy install wget \
+RUN apt-get update \
+    ; apt-get -qy install wget \
     ; wget https://download-cdn.resilio.com/stable/linux/x64/0/resilio-sync_x64.tar.gz \
     -O"/tmp/sync.tar.gz" \
     ; tar xf /tmp/sync.tar.gz -C /usr/bin rslsync \
