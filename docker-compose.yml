@@ -27,9 +27,9 @@ services:
       options:
         max-size: 1m
     volumes:
-     - /mnt/e/docker-container/sync/storage:/mnt/sync/storage    # sync 存储目录
-     - /mnt/e/docker-container/sync/conf:/mnt/sync/conf          # sync 配置文件
-     - /mnt/e/docker-container/sync/data:/mnt/sync/data          # sync data 数据共享同步目录
+     - ./sync/storage:/mnt/sync/storage    # sync 存储目录
+     - ./sync/conf:/mnt/sync/conf          # sync 配置文件
+     - ./sync/data:/mnt/sync/data          # sync data 数据共享同步目录
 
 networks:
   app-net:
