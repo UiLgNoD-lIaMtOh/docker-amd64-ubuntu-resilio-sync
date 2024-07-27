@@ -10,6 +10,7 @@ RUN apt-get -qy install wget \
     ; mv -fv /tmp/run_sync /usr/bin/ \
     ; chmod -v +x /usr/bin/run_sync \
     ; rm -f /tmp/sync.tar.gz \
-    ; mkdir -pv /mnt/sync
+    ; mkdir -pv /mnt/sync \
+    ; apt-get -qy purge wget
 
 CMD ["run_sync","--config", "/mnt/sync/conf/sync.conf"]
